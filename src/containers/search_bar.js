@@ -14,10 +14,10 @@ export default class SearchBar extends Component {
     this.setState({ term: event.target.value });
   }
 
-  onFormSubmit(){
-
+  onFormSubmit(event){
+    event.preventDefault();
   }
-  
+
   render(){
     return (
       <form onSubmit={this.onFormSubmit} className="input-group">
